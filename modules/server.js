@@ -47,6 +47,7 @@ class Server{
         })*/
         this.app.use(this.usuariosPath, require('../routes/usuarios'))
         this.app.use(this.authPath, require('../routes/auth'))
+        this.app.use('/api/mobiliarios', require('../routes/mobiliarios'));
     }
 
     async concetarDb(){
